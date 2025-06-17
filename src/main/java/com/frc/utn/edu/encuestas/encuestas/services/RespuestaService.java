@@ -36,8 +36,6 @@ public class RespuestaService {
 
 
 
-
-
 //        if (pregunta == null) {
 //            return null;
 //        }
