@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+
 @Data
 @NoArgsConstructor
 @Entity
@@ -14,6 +15,7 @@ import java.util.List;
 public class Encuesta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false, name = "id")
     private Long id;
     private String titulo;
     @OneToMany(mappedBy = "encuesta", cascade = CascadeType.ALL, orphanRemoval = true)

@@ -15,13 +15,12 @@ import java.util.List;
 public class Pregunta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false, name = "id")
     private Long id;
+
     private String contenido;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "encuesta_id")
     private Encuesta encuesta;
-    @OneToMany(mappedBy = "pregunta", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonManagedReference
-    private List<Respuesta> respuestas;
 }

@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class EncuestaDTO {
+public class EncuestaWithoutPreguntasDto {
     private Long id;
-    private String titulo;
+    private String titulo;    
 }

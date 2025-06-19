@@ -1,5 +1,9 @@
 package com.frc.utn.edu.encuestas.encuestas.DTOs;
 
+import java.util.List;
+
+import com.frc.utn.edu.encuestas.encuestas.entities.Respuesta;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class EncuestaDTO {
-    private Long id;
-    private String titulo;
+public class RespuestaDTO {
+    private Long encuestaId;
+    private List<Respuesta> respuestas;
 }
